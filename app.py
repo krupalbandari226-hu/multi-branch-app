@@ -6,10 +6,6 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"Hello from QA Branch - Python App")
 
-HTTPServer(('',3000),handler).serve_forever()
-FROM python:3.9
-WORKDIR /app
-COPY . .
-EXPOSE 3000
-CMD ["python", "app.py"]
+HTTPServer(('',5000),handler).serve_forever()
+
 
